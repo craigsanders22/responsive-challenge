@@ -6,13 +6,18 @@
   box-sizing: inherit;
 }
 
-
+html {
+  height: 100%;
+  margin: auto;
+  width: 960px;
+  overflow: scroll;
+}
 
 body {
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  min-height: 100vh;
+
   font-family: Roboto;
   font-size: 16px;
   line-height: 1.5;
@@ -22,14 +27,18 @@ body {
 header {
  
   padding: 10px 15px;
-  overflow: hidden;
+  margin-right: 20px;
+ 
 }
 
-header h1 {
- 
+header a {
+  display: flex;
+  
+  text-decoration: none;
   font-family: baskerville;
   font-size: 2.6em;
-  padding-left: 40px;
+  padding: 50px 16px;
+  line-height: 1.3em;
 
 
 }
@@ -43,23 +52,24 @@ header img {
 
 
 .hero {
-  background-image: url(hero.jpg);
-  background-size: cover;
+  background-color: mistyrose;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
   padding-top: 230px;
   padding-bottom: 200px;
-	/* here we posiition our background image on the x and y axis 
-  right hand edge on the right hand edge of our box
-  centered vertically */
-	background-position: right center;
+	
 }
 
-.hero div {
-  max-width: 540px;
+.hero img {
+  min-height: 20vh;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
+
+
 }
 
 .hero h2 {
@@ -68,77 +78,18 @@ header img {
   font-size: 64px;
   line-height: 1;
   margin-bottom: 15px;
+  max-width: 30ch;
 }
 
 .hero p {
+  float:left;
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+
 }
 
-.flowers {
-  overflow: hidden;
-}
 
-.flowers img {
-  float: left;
-	/* by using a percentage width, our images will now be fluid in relation to 
-  the size of their container */
-  width: 33.333%;
-}
-
-.quotes {
-  overflow: hidden;
-}
-
-.quotes div {
-  width: 50%;
-  float: left;
-  text-align: center;
-  padding: 50px 20px 40px 20px;
-}
-
-.cream-background {
-  background-color: #F7F1EE;
-}
-
-.quotes img {
-  width: 75px;
-	/* we can round the corners of elements using pure css, by
-  setting it as a percentage it will turn our square avatars into
-  perfect circles */
-  border-radius: 100%;
-}
-
-.quotes blockquote {
-  font-family: David Libre;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.15;
-  max-width: 400px;
-  margin: 15px auto 5px auto;
-}
-
-.chair {
-	/* here we override the background image, position and padding from
-  our .hero class above (which is also on the element) */
-  background-image: url(full-bleed.jpg);
-  background-position: center bottom;
-  padding: 0;
-  height: 500px;
-}
-
-.logos {
-  background-color: #EEAE9F;
-  padding: 20px 20px 35px 20px;
-  text-align: center;
-}
-
-.logos p {
-  color: #fff;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
 
 .logos img {
 	/* we apply our margins equally on both the left and the right */
@@ -149,7 +100,7 @@ header img {
 footer {
   background-color: #47353A;
   padding: 25px 30px;
-  overflow: hidden;
+  
 }
 
 footer img {
@@ -163,7 +114,7 @@ footer p {
   font-weight: 700;
 }
 
-/* our first breakpoint for responsive styles will be at 600px */
+/*  first breakpoint at 600px */
 @media (max-width: 600px) {
 
   .hero h2 {
@@ -191,11 +142,6 @@ footer p {
     font-size: 20px;
   }
   
-  .quotes p {
-		/* this will hide our elements from the page visually
-    but they will remain in the html */
-    display: none;
-  }
   
   body {
     font-size: 14px;
@@ -232,25 +178,7 @@ footer p {
   
 }
 
-@media (max-width: 820px) {
-  .logos img {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-}
 
-@media (max-width: 680px) {
-  .logos img {
-    margin: 0 auto 35px auto;
-    display: block;
-  }
-  
-  .logos img:last-child {
-		/* here we remove the margin bottom from the last img only */
-    margin-bottom: 0;
-  }
- 
-}
 
 /* these styles will only get applied *above* 820px screen width */
 @media (min-width: 820px) {
@@ -275,13 +203,129 @@ footer p {
   
 }
 
-@media (min-width: 600px) {
-  .quotes {
- 		display: flex;
-  	flex-wrap: wrap;
-  }
+  
+
+.cards {
+   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  max-width: 110rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
 }
 
+.cards h1 {
+  font-size: 200%;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.services {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  flex-wrap: wrap;
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.content .jewel {
+  font-size: 70px;
+  margin: 16px 0;
+}
+
+.content > * {
+  flex: 1 1 80%;
+}
+
+.content:hover {
+  color: white;
+}
+
+.content:hover a {
+  border-color: white;
+  background: white;
+}
+
+.content-1:hover {
+  background: dodgerblue;
+}
+
+.content-1:hover a {
+  color: dodgerblue;
+}
+
+.content-2:hover {
+  border-color: dodgerblue;
+  background: dodgerblue;
+}
+
+.content-2:hover a {
+  color: navy;
+}
+
+.content-3:hover {
+  border-color: 3px solid navy;
+  background: dodgerblue;
+}
+
+.content-3:hover a {
+  color: navy;
+}
+
+.content h2 {
+  font-size: 30px;
+  margin: 16px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.content p {
+  font-size: 17px;
+}
+
+.content a {
+  max-width: 100%;
+  margin: 22px 0;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px 0;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+.cards img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}
+
+.content a:hover {
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 
 
