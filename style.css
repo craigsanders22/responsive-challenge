@@ -8,31 +8,31 @@
 
 .inner-column {
   max-width: 1000px;
-  margin:auto;
+  margin: auto;
 }
 
 .two-columns {
+  display: flex;
   column-count: 2;
   column-gap: 30px;
   max-width: 1000px;
-
 }
 
-
 body {
+  max-width: 100%;
   display: flex;
+
   flex-direction: column;
   background-color: #fff;
   font-family: Roboto;
   font-size: 16px;
   line-height: 1.5;
-  color: #47353A;
+  color: #47353a;
 }
 
 header {
-  padding: 10px 15px;
+  padding: 10px 10px;
   margin-right: 20px;
- 
 }
 
 header a {
@@ -40,10 +40,8 @@ header a {
   text-decoration: none;
   font-family: baskerville;
   font-size: 2.6em;
-  padding-top: 30px;
+  padding-top: 10px;
   line-height: 1.3em;
-
-
 }
 
 header img {
@@ -51,150 +49,56 @@ header img {
   max-height: 100px;
   padding: 20px;
   padding-left: 20vw;
-  
 }
 
-
 section {
-  display:flex;
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
 }
 
 .hero {
-  
+  min-width: 400px;
   justify-content: center;
   background-color: mistyrose;
-  background-size:cover;
-  padding-top: 20vh;
+  background-size: cover;
+  padding-top: 15vh;
   padding-bottom: 10vh;
-	
+}
+
+section .flower1 {
+  min-width: 200px;
+  align-items:flex-end;
+  justify-content:flex-start;
+  border: 2px solid black;
+  overflow: hidden;
+
 }
 
 .hero img {
-  float:right;
+  float: right;
   max-height: 30vh;
-  padding-left: 20px;
- 
+
 }
 
 .hero h2 {
-  padding-left: 20px;
   padding-top: 20px;
+  padding-bottom: 30px;
   float: left;
   font-weight: 700;
   font-size: 3vh;
   line-height: 1;
-  margin-bottom: 15px;
-  max-width: 32ch;
-
-
 }
 
 .hero p {
-  display:inline-block;
-  
-  
-
+  display: inline-block;
 }
 
-footer {
-  background-color: #47353A;
-  padding: 25px 30px;
-  min-height: 15vh;
-  
-}
-
-
-footer h3 {
-  padding-left: 10px;
-  float: left;
-  font-size: 20px;
-  color: #CCC9CA;
-  font-weight: 700;
-
-}
-
-@media (max-width: 600px) {
-
-  .hero h2 {
-    margin-bottom: 5px;
-  }
-  
-  .hero {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-  
-.cards {
-    flex-direction: column;
-  }
-  
-  
-  body {
-    font-size: 14px;
-  }
-  
-  header nav {
-	
-    line-height: 24px;
-  }
-
-}
-
-@media (max-width: 430px) {
-  
-  header h1,
-  header nav {
-    float: none;
-  }
-
-  header nav a {
-    margin-left: 0;
-    margin-right: 12px;
-  }
-  
-  
-  footer {
-    padding: 30px 20px;
-  }
-  
-  
-}
-
-
-
-/* these styles will only get applied *above* 820px screen width */
-@media (min-width: 820px) {
-
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-		/* the box shadow is very similar to a photoshop drop shadow,
-    it allows us to specify x/y axis, blur radius, spread and shadow
-    colour */
-    box-shadow: 0 1px 5px 0px rgba(51, 51, 51, 0.3);
-  }
-  
-  .hero {
-		/* this creates the empty space above our hero for the
-    the header to sit in */
-    margin-top: 50px;
-  }  
-  
-}
-
-  
 
 .cards {
-   margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-
   max-width: 110rem;
   margin: 0 auto;
   text-align: center;
@@ -217,13 +121,13 @@ footer h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: lightblue;
+  background-color: #e9beac;
   flex-wrap: wrap;
   flex: 1;
   margin: 20px;
   padding: 20px;
   border-radius: 4px;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
 }
 
 .content .painting {
@@ -237,37 +141,14 @@ footer h3 {
 
 .content:hover {
   color: white;
+  background:#a36856;
+  border: 5px solid white;
 }
 
 .content:hover a {
-  border-color: white;
+  border-color: 2px solid black;
   background: white;
-}
-
-.content-1:hover {
-  background: dodgerblue;
-}
-
-.content-1:hover a {
-  color: dodgerblue;
-}
-
-.content-2:hover {
-  border-color: dodgerblue;
-  background: dodgerblue;
-}
-
-.content-2:hover a {
-  color: navy;
-}
-
-.content-3:hover {
-  border-color: 3px solid navy;
-  background: dodgerblue;
-}
-
-.content-3:hover a {
-  color: navy;
+  color: black;
 }
 
 .content h2 {
@@ -305,15 +186,90 @@ footer h3 {
   border-radius: 4px;
 }
 
+footer {
+  background-color: #47353a;
+  padding: 25px 30px;
+  min-height: 15vh;
+}
+
+footer h3 {
+  padding-left: 10px;
+  float: left;
+  font-size: 20px;
+  color: #ccc9ca;
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .hero h2 {
+    margin-bottom: 5px;
+  }
+
+ section {
+    flex-direction: column;
+    flex-wrap:wrap;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  header nav {
+    line-height: 12px;
+  }
+
+   header img {
+    padding-left: 0px;
+  }
+
+
+}
+
+@media (max-width: 430px) {
+  header h1,
+  header nav {
+    float: left;
+  }
+
+   header img {
+    padding-left: 10px;
+  }
+
+  .two-columns {
+  display: flex;
+  flex-direction: column;
+  column-count: 1;
+  column-gap: 30px;
+  max-width: 400px;
+}
+
+  
+
+  footer {
+    padding: 30px 20px;
+  }
+}
+
+
+@media (min-width: 800px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px 5px 0px rgba(51, 51, 51, 0.3);
+  }
+
+ 
+}
+
+
 @media (max-width: 768px) {
   .services {
     display: flex;
     flex-direction: column;
   }
 }
-
-
-
-
-
-
