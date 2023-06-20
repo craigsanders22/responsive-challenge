@@ -1,4 +1,5 @@
 @import "meyer-reset.css";
+@import "setup.css";
 
 * {
   margin: 0;
@@ -7,22 +8,17 @@
 }
 
 .inner-column {
-  max-width: 1000px;
+  max-width: 1400px;
   margin: auto;
+  padding: 20px;
 }
 
-.two-columns {
-  display: flex;
-  column-count: 2;
-  column-gap: 30px;
-  max-width: 1000px;
-}
 
 body {
   max-width: 100%;
   display: flex;
-
   flex-direction: column;
+  flex-wrap: wrap;
   background-color: #fff;
   font-family: Roboto;
   font-size: 16px;
@@ -31,83 +27,155 @@ body {
 }
 
 header {
-  padding: 10px 10px;
-  margin-right: 20px;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+
+  }
+
+header img {
+  max-height: 10vh;
+  padding: 20px;
+  border-radius: 25px;
 }
 
 header a {
-  display: flex;
   text-decoration: none;
   font-family: baskerville;
   font-size: 2.6em;
-  padding-top: 10px;
+  padding-top: 30px;
   line-height: 1.3em;
 }
 
-header img {
-  float: left;
-  max-height: 100px;
-  padding: 20px;
-  padding-left: 20vw;
-}
 
-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-}
 
 .hero {
-  min-width: 400px;
-  justify-content: center;
+  align-items: center;
   background-color: mistyrose;
   background-size: cover;
-  padding-top: 15vh;
-  padding-bottom: 10vh;
-}
-
-section .flower1 {
-  min-width: 200px;
-  align-items:flex-end;
-  justify-content:flex-start;
-  border: 2px solid black;
-  overflow: hidden;
+  padding-top: 200px;
+  padding-bottom: 0px;
 
 }
 
-.hero img {
-  float: right;
+.hero img{
+  float:left;
   max-height: 30vh;
-
+  margin-right: 30px;
 }
+
 
 .hero h2 {
-  padding-top: 20px;
-  padding-bottom: 30px;
+  max-width: 36ch;
+  
+
   float: left;
   font-weight: 700;
   font-size: 3vh;
   line-height: 1;
 }
 
-.hero p {
-  display: inline-block;
+.hero .flower1 {
+  display: none;
 }
 
+
+footer {
+  background-color: #47353a;
+  padding: 25px 30px;
+  min-height: 15vh;
+}
+
+footer h3 {
+  padding-left: 10px;
+  float: left;
+  font-size: 20px;
+  color: #ccc9ca;
+  font-weight: 700;
+}
+
+
+/* medium break point.*/
+@media (max-width: 600px) {
+  .hero inner-column {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    }  
+  
+
+  
+ .cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  body {
+    font-size: 14px;
+  }
+
+  header nav {
+    line-height: 24px;
+  }
+}
+
+/* small break point */
+@media (max-width: 430px) {
+  
+   .hero inner-column {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  header h1,
+  header nav {
+    float: none;
+  }
+
+  header nav a {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+
+  footer {
+    padding: 30px 20px;
+  }
+}
+
+/* large break point */
+@media (min-width: 820px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+   
+    box-shadow: 0 1px 5px 0px rgba(51, 51, 51, 0.3);
+  }
+
+  
+}
+
+/* about / card module */
 
 .cards {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  max-width: 110rem;
+
+  max-width: 120rem;
   margin: 0 auto;
   text-align: center;
-  padding: 30px;
 }
 
 .cards h1 {
-  font-size: 200%;
-  margin: 0 0 30px 0;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -121,13 +189,13 @@ section .flower1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e9beac;
+  background-color: lightblue;
   flex-wrap: wrap;
   flex: 1;
   margin: 20px;
   padding: 20px;
   border-radius: 4px;
-  transition: all 0.8s ease;
+  transition: all 0.3s ease;
 }
 
 .content .painting {
@@ -141,15 +209,17 @@ section .flower1 {
 
 .content:hover {
   color: white;
-  background:#a36856;
-  border: 5px solid white;
+  background: #a63f5e;
+  border: 3px solid black;
+  
 }
 
 .content:hover a {
-  border-color: 2px solid black;
+  border-color: black;
   background: white;
   color: black;
 }
+
 
 .content h2 {
   font-size: 30px;
@@ -178,7 +248,6 @@ section .flower1 {
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
 }
 
@@ -186,90 +255,10 @@ section .flower1 {
   border-radius: 4px;
 }
 
-footer {
-  background-color: #47353a;
-  padding: 25px 30px;
-  min-height: 15vh;
-}
-
-footer h3 {
-  padding-left: 10px;
-  float: left;
-  font-size: 20px;
-  color: #ccc9ca;
-  font-weight: 700;
-}
-
-@media (max-width: 800px) {
-  .hero h2 {
-    margin-bottom: 5px;
-  }
-
- section {
-    flex-direction: column;
-    flex-wrap:wrap;
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
-  body {
-    font-size: 14px;
-  }
-
-  header nav {
-    line-height: 12px;
-  }
-
-   header img {
-    padding-left: 0px;
-  }
-
-
-}
-
-@media (max-width: 430px) {
-  header h1,
-  header nav {
-    float: left;
-  }
-
-   header img {
-    padding-left: 10px;
-  }
-
-  .two-columns {
-  display: flex;
-  flex-direction: column;
-  column-count: 1;
-  column-gap: 30px;
-  max-width: 400px;
-}
-
-  
-
-  footer {
-    padding: 30px 20px;
-  }
-}
-
-
-@media (min-width: 800px) {
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 1px 5px 0px rgba(51, 51, 51, 0.3);
-  }
-
- 
-}
-
-
 @media (max-width: 768px) {
   .services {
     display: flex;
     flex-direction: column;
   }
-}
+
+ 
