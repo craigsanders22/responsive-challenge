@@ -1,201 +1,176 @@
+
 @import "meyer-reset.css";
 @import "setup.css";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
+
+/* POSITIONING */
+
 
 .inner-column {
-  max-width: 1400px;
-  margin: auto;
+  width:100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
   height: 100%;
   border: 4px solid pink;
 }
 
 
 body {
-  max-width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   background-color: #fff;
-  font-family: Roboto;
+  font-family: sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #47353a;
 }
 
 header {
-  display:flex;
+ display: flex;
   flex-direction: row;
+  justify-content: start;
   align-items: center;
-
+  gap: 30px;
+  padding: 10px;
   }
 
+header .inner-column {
+  
+  display: flex;
+
+}
+
 header img {
-  max-height: 10vh;
-  padding: 20px;
-  border-radius: 25px;
+  max-width: 80px;
+  padding-right: 30px;
+  border-radius: 50%;
 }
 
 header a {
+  display: inline;
   text-decoration: none;
   font-family: baskerville;
   font-size: 2.6em;
-  padding-top: 30px;
-  line-height: 1.3em;
+  
+  
 }
-
-
 
 .hero {
-  align-items: center;
+  display: flex;
   background-color: mistyrose;
   background-size: cover;
-  padding-top: 200px;
-  padding-bottom: 0px;
+  padding-top: 50px;
+ 
 
 }
 
-.hero img{
-  float:left;
-  max-height: 30vh;
-  margin-right: 30px;
+.hero .inner-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
 }
 
-
-.hero h2 {
-  max-width: 36ch;
-  
-
-  float: left;
+.hero h1 {
+  display: flex;
+  font-size: 20px;
   font-weight: 700;
-  font-size: 3vh;
-  line-height: 1;
+  
 }
 
-.hero .flower1 {
+.hero .image {
+  max-width: 800px;
+}
+
+
+.flower1 {
   display: none;
 }
 
-
-footer {
-  background-color: #47353a;
-  padding: 25px 30px;
-  min-height: 15vh;
+.flower2 {
+  display: none;
 }
 
-footer h3 {
-  padding-left: 10px;
-  float: left;
-  font-size: 20px;
-  color: #ccc9ca;
-  font-weight: 700;
+.site-footer {
+  padding: 10px;
+}
+.site-footer a {
+  display: inline-block;
+  padding: 20px;
+  border: 3px solid #a63f5e;
+
 }
 
-/* large break point */
 
-@media (min-width: 900px) {
+
+
+/* Medium */
+@media (min-width: 600px) {
+  .hero .inner-column {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero picture, .hero h1 {
+    flex-basis: 50%;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+
+
+
+
+/* Large */
+
+@media (min-width: 1000px) {
   
-  header {
-    align-content: flex-start;
-    
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 1px 5px 0px rgba(51, 51, 51, 0.3);
+  .hero {
+    overflow: hidden;
   }
 
-  .inner-column {
-
-  }
-
-  }
 
   .hero .inner-column {
     align-items: flex-start;
     border: 5px solid blue;
     position: relative;
-    overflow: hidden;
+   
 
   }
 
 
   .hero .flower1 {
     display: block; 
-    width: 250px;
+    width: 280px;
     position: absolute;
-    right:0;
-    bottom: 0;
-
+    right: -35px;
+    bottom: -140px;
+    opacity: .3;
 
   }
-
-  
-}
-
-
-/* medium break point.*/
-@media (max-width: 600px) {
-  .hero inner-column {
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    }  
-  
-
-  
- .cards {
-    display: flex;
-    flex-direction: column;
-  }
+  .hero .flower2 {
+    display: block; 
+    width: 280px;
+    position: absolute;
+    left: -400px;
+    bottom: -40px;
+     
 
 
-
-  body {
-    font-size: 14px;
-  }
-
-  header nav {
-    line-height: 24px;
-  }
-}
-
-/* small break point */
-@media (max-width: 430px) {
-  
-   .hero .inner-column {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
-  header h1,
-  header nav {
-    float: none;
-  }
-
-  header nav a {
-    margin-left: 0;
-    margin-right: 12px;
-  }
-
-  footer {
-    padding: 30px 20px;
   }
 }
 
 
-/* about / card module */
 
+
+/* card module */
 .cards {
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: sans-serif;
   max-width: 120rem;
   margin: 0 auto;
   text-align: center;
@@ -215,7 +190,7 @@ footer h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: lightblue;
+  background-color: #e7dcd0;
   flex-wrap: wrap;
   flex: 1;
   margin: 20px;
@@ -225,7 +200,7 @@ footer h3 {
 }
 
 .content .painting {
-  font-size: 70px;
+  font-size: 60px;
   margin: 16px 0;
 }
 
@@ -281,10 +256,23 @@ footer h3 {
   border-radius: 4px;
 }
 
+
+
 @media (max-width: 768px) {
   .services {
     display: flex;
     flex-direction: column;
   }
 
- 
+  .services img {
+    max-width: 60vw;
+  }
+
+
+
+
+}
+
+
+
+

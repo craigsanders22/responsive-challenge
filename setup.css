@@ -1,18 +1,28 @@
 setup.css
 
 * {
+	max-width: 1440px;
 	box-sizing: border-box;
 }
 
 a {
 	
-	display: block;
+	display: inline;
 	text-decoration: none;
 	color: inherit;
 }
 
 img {
 	display: block;
-
+	width: 100%;
 	height: auto;
+}
+
+picture {
+  display: block;
+  max-width: 100%;
+  }
+
+h3 + a {
+
 }
