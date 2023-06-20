@@ -10,7 +10,8 @@
 .inner-column {
   max-width: 1400px;
   margin: auto;
-  padding: 20px;
+  height: 100%;
+  border: 4px solid pink;
 }
 
 
@@ -94,6 +95,46 @@ footer h3 {
   font-weight: 700;
 }
 
+/* large break point */
+
+@media (min-width: 900px) {
+  
+  header {
+    align-content: flex-start;
+    
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px 5px 0px rgba(51, 51, 51, 0.3);
+  }
+
+  .inner-column {
+
+  }
+
+  }
+
+  .hero .inner-column {
+    align-items: flex-start;
+    border: 5px solid blue;
+    position: relative;
+    overflow: hidden;
+
+  }
+
+
+  .hero .flower1 {
+    display: block; 
+    width: 250px;
+    position: absolute;
+    right:0;
+    bottom: 0;
+
+
+  }
+
+  
+}
+
 
 /* medium break point.*/
 @media (max-width: 600px) {
@@ -126,7 +167,7 @@ footer h3 {
 /* small break point */
 @media (max-width: 430px) {
   
-   .hero inner-column {
+   .hero .inner-column {
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -149,27 +190,12 @@ footer h3 {
   }
 }
 
-/* large break point */
-@media (min-width: 820px) {
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-   
-    box-shadow: 0 1px 5px 0px rgba(51, 51, 51, 0.3);
-  }
-
-  
-}
 
 /* about / card module */
 
 .cards {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-
   max-width: 120rem;
   margin: 0 auto;
   text-align: center;
