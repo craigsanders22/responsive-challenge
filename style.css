@@ -93,7 +93,19 @@ header a {
   display: none;
 }
 
+.flower3 {
+  display: none;
+}
+
+.info {
+  display:flex;
+   background-color: #e9c0ac;
+  background-size: cover;
+  
+  }
+
 .site-footer {
+  background-color: #fee4e1;
   padding: 10px;
 }
 .site-footer a {
@@ -158,22 +170,43 @@ header a {
     position: absolute;
     left: -400px;
     bottom: -40px;
-     
+    
+  }
 
+  .info {
+    overflow: hidden;
+  }
+
+  .info .inner-column {
+    align-items: flex-start;
+    border: 5px solid blue;
+    position: relative;
+   
 
   }
+
+
+  .info .flower3 {
+    display: block; 
+    width: 280px;
+    position: absolute;
+    right: -300px;
+    bottom: -100px;
+    opacity: .8;
+
 }
 
 
 
 
 /* card module */
-.cards {
+.info .cards {
   box-sizing: border-box;
   font-family: sans-serif;
   max-width: 120rem;
   margin: 0 auto;
   text-align: center;
+
 }
 
 .cards h1 {
@@ -262,10 +295,6 @@ header a {
   .services {
     display: flex;
     flex-direction: column;
-  }
-
-  .services img {
-    max-width: 60vw;
   }
 
 
