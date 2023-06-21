@@ -1,19 +1,22 @@
+
 @import "meyer-reset.css";
 @import "setup.css";
 
+
 /* POSITIONING */
 
+
 .inner-column {
-  width: 100%;
+  width:100%;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   height: 100%;
-
+  border: 4px solid pink;
 }
 
+
 body {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -24,19 +27,19 @@ body {
   color: #47353a;
 }
 
-
-
 header {
-  display: flex;
+ display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
   gap: 30px;
   padding: 10px;
-}
+  }
 
 header .inner-column {
+  
   display: flex;
+
 }
 
 header img {
@@ -45,16 +48,13 @@ header img {
   border-radius: 50%;
 }
 
-.info img {
-  width: 200px;
-  height: 300px;
-}
-
 header a {
   display: inline;
   text-decoration: none;
   font-family: baskerville;
   font-size: 2.6em;
+  
+  
 }
 
 .hero {
@@ -62,6 +62,8 @@ header a {
   background-color: mistyrose;
   background-size: cover;
   padding-top: 50px;
+ 
+
 }
 
 .hero .inner-column {
@@ -75,11 +77,13 @@ header a {
   display: flex;
   font-size: 20px;
   font-weight: 700;
+  
 }
 
 .hero .image {
   max-width: 800px;
 }
+
 
 .flower1 {
   display: none;
@@ -94,20 +98,25 @@ header a {
 }
 
 .info {
-  background-color: #e9c0ac;
+  display:flex;
+   background-color: #e9c0ac;
   background-size: cover;
-}
+  
+  }
 
 .site-footer {
   background-color: #fee4e1;
   padding: 10px;
 }
-
 .site-footer a {
   display: inline-block;
   padding: 20px;
   border: 3px solid #a63f5e;
+
 }
+
+
+
 
 /* Medium */
 @media (min-width: 600px) {
@@ -116,8 +125,7 @@ header a {
     align-items: center;
   }
 
-  .hero picture,
-  .hero h1 {
+  .hero picture, .hero h1 {
     flex-basis: 50%;
   }
 
@@ -126,34 +134,43 @@ header a {
   }
 }
 
+
+
+
 /* Large */
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
+  
   .hero {
     overflow: hidden;
   }
 
+
   .hero .inner-column {
     align-items: flex-start;
-    
+    border: 5px solid blue;
     position: relative;
+   
+
   }
 
+
   .hero .flower1 {
-    display: block;
+    display: block; 
     width: 280px;
     position: absolute;
     right: -35px;
     bottom: -140px;
-    opacity: 0.3;
-  }
+    opacity: .3;
 
+  }
   .hero .flower2 {
-    display: block;
+    display: block; 
     width: 280px;
     position: absolute;
     left: -400px;
     bottom: -40px;
+    
   }
 
   .info {
@@ -162,28 +179,34 @@ header a {
 
   .info .inner-column {
     align-items: flex-start;
-   
+    border: 5px solid blue;
     position: relative;
+   
+
   }
 
-  .flower3 {
-    display: block;
+
+  .info .flower3 {
+    display: block; 
     width: 280px;
     position: absolute;
     right: -300px;
     bottom: -100px;
-    opacity: 0.8;
-    overflow:hidden;
-  }
+    opacity: .8;
+
 }
 
+
+
+
 /* card module */
-.cards {
+.info .cards {
   box-sizing: border-box;
   font-family: sans-serif;
   max-width: 120rem;
   margin: 0 auto;
   text-align: center;
+
 }
 
 .cards h1 {
@@ -222,6 +245,7 @@ header a {
   color: white;
   background: #a63f5e;
   border: 3px solid black;
+  
 }
 
 .content:hover a {
@@ -229,6 +253,7 @@ header a {
   background: white;
   color: black;
 }
+
 
 .content h2 {
   font-size: 30px;
@@ -264,17 +289,19 @@ header a {
   border-radius: 4px;
 }
 
-@media (min-width: 900px) {
-  .info .service {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
-}
 
-@media (max-width: 600px) {
+
+@media (max-width: 768px) {
   .services {
     display: flex;
     flex-direction: column;
   }
+
+
+
+
 }
+
+
+
+
