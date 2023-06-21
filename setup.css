@@ -1,20 +1,20 @@
 setup.css
 
 * {
-	max-width: 1440px;
+	max-width: 1400px;
 	box-sizing: border-box;
 }
 
 a {
 	
-	display: inline;
+	display: block;
 	text-decoration: none;
 	color: inherit;
 }
 
 img {
 	display: block;
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 }
 
@@ -23,6 +23,3 @@ picture {
   max-width: 100%;
   }
 
-h3 + a {
-
-}

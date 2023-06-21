@@ -1,22 +1,17 @@
-
 @import "meyer-reset.css";
 @import "setup.css";
 
-
 /* POSITIONING */
 
-
-.inner-column {
-  width:100%;
+  .inner-column {
   max-width: 1000px;
-  margin-left: auto;
   margin-right: auto;
-  height: 100%;
-  border: 4px solid pink;
+  margin-left: auto;
+  padding: 10px;
 }
 
-
 body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -27,19 +22,21 @@ body {
   color: #47353a;
 }
 
+
 header {
- display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
   gap: 30px;
   padding: 10px;
-  }
+}
 
 header .inner-column {
-  
-  display: flex;
-
+  display:flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: start;
 }
 
 header img {
@@ -48,13 +45,16 @@ header img {
   border-radius: 50%;
 }
 
+.info img {
+  width: 200px;
+  height: 300px;
+}
+
 header a {
   display: inline;
   text-decoration: none;
   font-family: baskerville;
   font-size: 2.6em;
-  
-  
 }
 
 .hero {
@@ -62,8 +62,7 @@ header a {
   background-color: mistyrose;
   background-size: cover;
   padding-top: 50px;
- 
-
+  padding-bottom: 50px;
 }
 
 .hero .inner-column {
@@ -74,16 +73,15 @@ header a {
 }
 
 .hero h1 {
+  font-family: lato;
   display: flex;
-  font-size: 20px;
+  font-size:18px;
   font-weight: 700;
-  
 }
 
 .hero .image {
   max-width: 800px;
 }
-
 
 .flower1 {
   display: none;
@@ -98,24 +96,30 @@ header a {
 }
 
 .info {
-  display:flex;
-   background-color: #e9c0ac;
+  background-color: #e9c0ac;
   background-size: cover;
-  
-  }
+}
 
 .site-footer {
   background-color: #fee4e1;
   padding: 10px;
 }
+
 .site-footer a {
   display: inline-block;
-  padding: 20px;
+  padding: 10px 30px;
   border: 3px solid #a63f5e;
+  border-radius: 25px;
+
 
 }
 
+.site-footer a:hover {
+  color:white;
+  background-color: #a63f5e;
+  transition: 1s;
 
+}
 
 
 /* Medium */
@@ -125,52 +129,45 @@ header a {
     align-items: center;
   }
 
-  .hero picture, .hero h1 {
+  .hero picture,
+  .hero h1 {
     flex-basis: 50%;
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 24px;
   }
+
 }
-
-
-
 
 /* Large */
 
-@media (min-width: 1000px) {
-  
+@media (min-width: 800px) {
   .hero {
     overflow: hidden;
   }
 
-
   .hero .inner-column {
     align-items: flex-start;
-    border: 5px solid blue;
+    
     position: relative;
-   
-
   }
 
-
   .hero .flower1 {
-    display: block; 
+    display: block;
     width: 280px;
     position: absolute;
     right: -35px;
     bottom: -140px;
-    opacity: .3;
-
+    opacity: 0.3;
   }
+
   .hero .flower2 {
-    display: block; 
+    display: block;
     width: 280px;
     position: absolute;
     left: -400px;
     bottom: -40px;
-    
   }
 
   .info {
@@ -179,34 +176,28 @@ header a {
 
   .info .inner-column {
     align-items: flex-start;
-    border: 5px solid blue;
-    position: relative;
    
-
+    position: relative;
   }
 
-
-  .info .flower3 {
-    display: block; 
+  .flower3 {
+    display: block;
     width: 280px;
     position: absolute;
     right: -300px;
     bottom: -100px;
-    opacity: .8;
-
+    opacity: 0.8;
+    overflow:hidden;
+  }
 }
 
-
-
-
 /* card module */
-.info .cards {
+.cards {
   box-sizing: border-box;
   font-family: sans-serif;
-  max-width: 120rem;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
-
 }
 
 .cards h1 {
@@ -245,7 +236,6 @@ header a {
   color: white;
   background: #a63f5e;
   border: 3px solid black;
-  
 }
 
 .content:hover a {
@@ -253,7 +243,6 @@ header a {
   background: white;
   color: black;
 }
-
 
 .content h2 {
   font-size: 30px;
@@ -279,7 +268,9 @@ header a {
 }
 
 .cards img {
-  display: flex;
+  display: inline-block;
+  max-width: 200px;
+  height: auto;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
@@ -289,19 +280,19 @@ header a {
   border-radius: 4px;
 }
 
+@media (min-width: 900px) {
+  .info .service {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
 
-
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .services {
     display: flex;
     flex-direction: column;
+
   }
 
-
-
-
 }
-
-
-
-
