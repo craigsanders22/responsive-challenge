@@ -40,8 +40,11 @@ header .inner-column {
 }
 
 header img {
-  max-width: 80px;
-  padding-right: 30px;
+ display: inline-block;
+  max-width: 100px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
 }
 
@@ -102,12 +105,12 @@ header a {
 
 .site-footer {
   background-color: #fee4e1;
-  padding: 10px;
+  padding: 5px;
 }
 
 .site-footer a {
   display: inline-block;
-  padding: 10px 30px;
+  padding: 10px 10px;
   border: 3px solid #a63f5e;
   border-radius: 25px;
 
