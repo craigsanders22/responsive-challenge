@@ -1,0 +1,72 @@
+
+
+* {
+
+	box-sizing: border-box;
+	
+
+}
+
+
+a {
+	
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+picture {
+  display: block;
+  max-width: 100%;
+  
+  }
+
+
+/*Type patterns*/
+
+.xxl-voice {
+	font-family: var(--primary-font);
+	word-spacing: 30px;
+	font-size: clamp(2rem, 10vw, 6rem); 
+	font-weight: 400;
+}
+
+.signature-voice {
+		font-family: var(--flair-font);
+	font-size: 4rem;
+	font-weight: 200;
+	font-style: italic;
+}
+
+.xl-voice {
+	font-family: var(--secondary-font);
+	font-size: 5rem;
+	font-weight: 200;
+	font-style: italic;
+}
+
+.large-voice {
+	font-family: var(--primary-font);
+	font-size: 1.25rem;
+	font-weight: 400;
+}
+
+.medium-voice {
+	font-family: var(--primary-font);
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.small-voice {
+	font-family: var(--secondary-font);
+	font-size: 0.5rem;
+	font-weight: 400;
+	font-style: italic;
+}
+
