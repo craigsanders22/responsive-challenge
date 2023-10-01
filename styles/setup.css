@@ -33,22 +33,23 @@ picture {
 .xxl-voice {
 	font-family: var(--primary-font);
 	word-spacing: 30px;
-	font-size: clamp(2rem, 10vw, 6rem); 
+	font-size: clamp(1.5rem, 6vw, 6rem); 
 	font-weight: 400;
 }
 
 .signature-voice {
 		font-family: var(--flair-font);
-	font-size: 4rem;
+	font-size: clamp(1.5rem, 6vw, 5rem);
 	font-weight: 200;
 	font-style: italic;
 }
 
 .xl-voice {
-	font-family: var(--secondary-font);
-	font-size: 5rem;
-	font-weight: 200;
-	font-style: italic;
+	font-family: var(--primary-font);
+	font-size: 2.2rem;
+	font-weight: 600;
+	text-height: 1.5;
+	
 }
 
 .large-voice {

@@ -3,6 +3,8 @@
 
 <?php include('hero.php'); ?>
 
+<?php include('work.php'); ?>
+
 
 
 

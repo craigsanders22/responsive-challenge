@@ -8,7 +8,7 @@
 			<img src="hero.jpg">
 		</picture>
 
-		<div class="xxl-voice hero-copy ">PAINTER ILLUSTRATOR</div>
+		<div class="xxl-voice hero-copy ">PAINTER & ILLUSTRATOR</div>
 	
 	</div>
 	</div>
